@@ -1,0 +1,1 @@
+web: gunicorn minasblog.wsgi --log-file -
