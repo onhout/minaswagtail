@@ -1,0 +1,20 @@
+{
+  "name": "minasblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onhout/minaswagtail.git"
+  },
+  "author": "Peter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onhout/minaswagtail/issues"
+  },
+  "homepage": "https://github.com/onhout/minaswagtail#readme"
+}

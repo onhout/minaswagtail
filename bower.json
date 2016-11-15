@@ -1,0 +1,22 @@
+{
+  "name": "minasblog",
+  "homepage": "https://github.com/onhout/minaswagtail",
+  "authors": [
+    "Peter Liu <onhout@gmail.com>"
+  ],
+  "description": "This is the front end for Mina's Blog",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "minasblog/static/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "requirejs": "^2.3.2"
+  }
+}

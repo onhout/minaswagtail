@@ -15,11 +15,11 @@ from __future__ import absolute_import, unicode_literals
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import dj_database_url
+
 db_from_env = dj_database_url.config(conn_max_age=500)
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'require',
 ]
 
 MIDDLEWARE = [
@@ -90,7 +91,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'minasblog.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
@@ -100,7 +100,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 DATABASES['default'].update(db_from_env)
 
@@ -117,7 +116,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
@@ -130,12 +128,15 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_DIR, 'static'),
 ]
 
+STATICFILES_STORAGE = 'require.storage.OptimizedStaticFilesStorage'
+REQUIRE_BASE_URL = "components/requirejs"
+
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
 
 # Wagtail settings
 
@@ -146,5 +147,4 @@ WAGTAIL_SITE_NAME = "minasblog"
 BASE_URL = 'http://www.minajeong.com'
 
 ALLOWED_HOSTS = ['*']
-
 
