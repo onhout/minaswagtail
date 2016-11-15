@@ -146,3 +146,5 @@ WAGTAIL_SITE_NAME = "minasblog"
 BASE_URL = 'http://www.minajeong.com'
 
 ALLOWED_HOSTS = ['*']
+
+
